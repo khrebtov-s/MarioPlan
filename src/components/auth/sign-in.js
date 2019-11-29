@@ -3,9 +3,7 @@ import React, { Component } from 'react';
 export class SignIn extends Component {
     state = {
         email: '',
-        password: '',
-        firstName: '',
-        lastName: ''
+        password: ''
     };
 
     handleChange = (e) => {
