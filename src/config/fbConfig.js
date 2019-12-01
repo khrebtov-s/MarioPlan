@@ -12,8 +12,7 @@ var firebaseConfig = {
     appId: "1:1059209265473:web:f7db4dca241ea098f321c0",
     measurementId: "G-K2DRREX5N1"
 };
-console.log('console.log();');
-
+// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.firestore().settings({ timestampsInSnapshots: true });
 
