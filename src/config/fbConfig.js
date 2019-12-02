@@ -2,18 +2,17 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
 
-var firebaseConfig = {
-    apiKey: "AIzaSyBB2_IAh3FTmzMu2sXakwLVFwrgmiZ5rBE",
-    authDomain: "net-ninja-marioplan-ca748.firebaseapp.com",
-    databaseURL: "https://net-ninja-marioplan-ca748.firebaseio.com",
-    projectId: "net-ninja-marioplan-ca748",
-    storageBucket: "net-ninja-marioplan-ca748.appspot.com",
-    messagingSenderId: "1059209265473",
-    appId: "1:1059209265473:web:f7db4dca241ea098f321c0",
-    measurementId: "G-K2DRREX5N1"
+var config = {
+  apiKey: "AIzaSyBQtdSpPhIE-t9xkK9CAPeEhnP6AV-T8hE",
+  authDomain: "mario-plan-a23c1.firebaseapp.com",
+  databaseURL: "https://mario-plan-a23c1.firebaseio.com",
+  projectId: "mario-plan-a23c1",
+  storageBucket: "mario-plan-a23c1.appspot.com",
+  messagingSenderId: "525088098170",
+  appId: "1:525088098170:web:582ce211385392a5fa38c3"
 };
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(config);
 firebase.firestore().settings({ timestampsInSnapshots: true });
 
-export default firebase;
+export default firebase 
