@@ -8,6 +8,7 @@ class SignIn extends Component {
     password: ''
   };
 
+
   handleChange = (e) => {
     this.setState({
       [e.target.id]: e.target.value
@@ -15,8 +16,10 @@ class SignIn extends Component {
   };
 
   handleSubmit = (e) => {
+    const { signIn } = this.props;
+
     e.preventDefault();
-    this.props.signIn(this.state);
+    signIn(this.state);
   };
 
   render() {
