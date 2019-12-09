@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { signUp } from '../../store/actions/authActions';
-import { disconnect } from 'cluster';
 
 class SignUp extends Component {
   state = {
@@ -68,7 +67,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    signUp: (newUser) => dispatchh(signUp(newUser))
+    signUp: (newUser) => dispatch(signUp(newUser))
   };
 };
 

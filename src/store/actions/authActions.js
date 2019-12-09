@@ -24,9 +24,9 @@ export const signOut = () => {
 };
 
 export const signUp = (newUser) => {
-    return (dispatch, getState, { getFirebase, getFireStore }) => {
-        const firebase = getFirebase(),
-            firestore = getFireStore();
+    return (dispatch, getState, { getFirebase, getFirestore }) => {
+        const firebase = getFirebase();
+        const firestore = getFirestore();
 
         firebase.auth().createUserWithEmailAndPassword(
             newUser.email,
@@ -39,7 +39,7 @@ export const signUp = (newUser) => {
             })
         }).then(() => {
             dispatch({ type: 'SIGNUP_SUCCESS' })
-        }).catch(() => {
+        }).catch((err) => {
             dispatch({ type: 'SIGNUP_ERROR', err })
         })
     };

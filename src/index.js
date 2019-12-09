@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -14,7 +15,7 @@ import firebase from './config/fbConfig'
 const store = createStore(rootReducer,
   compose(
     applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore })),
-    reactReduxFirebase(firebase, { attachAuthIsReady: true }), // redux binding for firebase
+    reactReduxFirebase(firebase, { userProfile: 'users', useFirestoreForProfile: true, attachAuthIsReady: true }),
     reduxFirestore(firebase) // redux bindings for firestore
   )
 );
@@ -23,5 +24,3 @@ store.firebaseAuthIsReady.then(() => {
   ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
   registerServiceWorker();
 });
-
-
